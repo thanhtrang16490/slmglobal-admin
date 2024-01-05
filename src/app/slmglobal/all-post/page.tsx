@@ -1,7 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Modal, Form, Input } from 'antd';
+import { Table, Button, Modal, Form, Input, Typography } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import { Content } from 'antd/es/layout/layout';
 const { TextArea } = Input;
 
 
@@ -54,7 +55,7 @@ const BlogPage: React.FC = () => {
     },
     {
       title: 'Title',
-      dataIndex: 'Title',
+      dataIndex: 'title',
       key: 'Name',
     },
     {
@@ -90,7 +91,11 @@ const BlogPage: React.FC = () => {
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
-        <Button type="primary" icon={<PlusOutlined />} onClick={showModal}>Add Post</Button>
+        <Content style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Typography.Title level={3}>All Posts</Typography.Title>
+          <Button type="primary" icon={<PlusOutlined />} onClick={showModal}>Add Post</Button>
+        </Content>
+
         <Modal title="Add Customer" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={1000} okText="Save">
           <Form form={form} layout="vertical">
             <Form.Item label="Title" name="title">
