@@ -43,7 +43,7 @@ const items: MenuItem[] = [
   ]),
 
   getItem('Products', 'products', <ShopOutlined />, [
-    getItem('All Products', 'all-products'),
+    getItem(<Link href='/slmglobal/all-product'>All Product</Link>, 'all-products'),
     getItem('Add New', 'product-add-new'),
     getItem('Category', 'product-category'),
   ]),
