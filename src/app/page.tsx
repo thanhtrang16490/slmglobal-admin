@@ -5,7 +5,7 @@ const Home = () => {
 
   return (
     <>
-      Homepage
+      Homepage type form mac
     </>
   );
 };
